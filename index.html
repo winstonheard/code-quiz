@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Javascript Code Quiz</h1>
+        <p>From Arrays to zIndex, let's see what you know!</p>
+    </header>
+    <!-- section for high scores and timer -->
+    <section class="scores-timer">
+        <h3 id="high-scores">Show high scores</h3>
+        <h3>Timer: <span id="timer">120</span></h3>
+    </section>
+    
+    <!-- quiz instructions -->
+    <section class="container">
+        <div id="instructions" class="flex-column flex-center">
+            <h2>Quiz instructions</h2>
+            <p>Answer the following questions within 2 minutes. But know that incorrect answers will penalize your time by ten seconds. Let's see what you know!</p>
+            <button id="start-btn">Begin</button>
+        </div>
+    <section class="container">
+
+<!-- quiz questions -->
+<section id="quiz-questions" hidden>
+    <h3 id="question"></h3>
+    <ol id="answers" hidden>
+        <li class="answer"></li>
+        <li class="answer"></li>
+        <li class="answer"></li>
+        <li class="answer"></li>
+    </ol>
+</section>
+
+<!-- save quiz score -->
+<section id="save-score" hidden>
+    <h2>Quiz complete!</h2>
+    <p>Enter your initials to save your score.</p>
+    <form>
+        <input type="text" id="initials" placeholder="Enter initials">
+        <button id="submit-btn">Submit</button>
+    </form>
+</section>
+
+<!-- view high scores -->
+<section id="high-scores" hidden>
+    <h2>High Scores</h2>
+    <ol id="high-scores-list">
+        <li class="user-score"></li>
+        <li class="user-score"></li>
+        <li class="user-score"></li>
+        <li class="user-score"></li>
+        <li class="user-score"></li>
+    </ol>
+    <button id="go-back">Try again</button>
+    <button id="clear-scores">Clear scores</button>
+</section>
+    </section>
+
+    <script src="quiz.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

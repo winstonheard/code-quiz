@@ -1,0 +1,103 @@
+:root {
+    --ice-cold: #a0d2eb;
+    --freeze-purple: #e5eaf5;
+    --medium-purple: #d0bdf4;
+    --purple: #8458b3;
+    --charcoal: #494d5f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--freeze-purple);
+    color: var(--charcoal);
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+}
+
+header {
+    background-color: var(--ice-cold);
+    padding: 1rem;  
+    font-size: 150%;
+    text-align:center;
+}
+
+h1 {
+    font-size: 175%;
+}
+
+.scores-timer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 125%;
+    background-color: var(--medium-purple);
+    margin: 2em;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+button {
+    background-color: var(--ice-cold);
+    border: 1px solid var(--charcoal);
+    border-radius: 5px;
+    color: var(--charcoal);
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--purple);
+    color: var(--ice-cold);
+}
+
+ol {
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 75%;
+}
+
+.answers {
+    background-color: var(--ice-cold);
+    border: 1px solid var(--charcoal);
+    border-radius: 5px;
+    color: var(--charcoal);
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.answers:hover {
+    background-color: var(--purple);
+    color: var(--ice-cold);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#high-scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}

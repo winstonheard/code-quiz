@@ -5,68 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz</title>
-    <link rel="stylesheet" href="./assets/styles/reset.css">
+    
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
     <header>
         <h1>Javascript Code Quiz</h1>
-        <p>From Arrays to zIndex, let's see what you know!</p>
+        
     </header>
-    <!-- section for high scores and timer -->
-    <section class="scores-timer">
-        <h3 id="high-scores">Show high scores</h3>
-        <h3>Timer: <span id="timer">120</span></h3>
-    </section>
-    
-    <!-- quiz instructions -->
-    <section class="container">
-        <div id="instructions" class="flex-column flex-center">
-            <h2>Quiz instructions</h2>
-            <p>Answer the following questions within 2 minutes. But know that incorrect answers will penalize your time by ten seconds. Good luck!</p>
-            <button id="start-btn">Begin</button>
-        </div>
-    </section>
 
-<!-- quiz questions -->
-<section id="quiz-questions" hidden>
-    <h3 id="question"></h3>
-    <ol id="answers" hidden>
-        <li class="answer"></li>
-        <li class="answer"></li>
-        <li class="answer"></li>
-        <li class="answer"></li>
-    </ol>
-</section>
+    <main>
+        <section id="welcome">
+            <p>From Arrays to zIndex, let's see what you know!</p>
+            <button id="start-quiz">Start Quiz</button>
+            <button id="view-high-scores">View High Scores</button>
+        </section>
 
-<!-- save quiz score -->
-<section id="save-score" hidden>
-    <h2>Quiz complete!</h2>
-    <p>Enter your initials to save your score.</p>
-    <form>
-        <input type="text" id="initials" placeholder="Enter initials">
-        <button id="submit-btn">Submit</button>
-    </form>
-</section>
+        <section id="quiz-container" style="display:none;">
+            <h2 id="timer">Time remaining: 2:00</h2>
+            <h3 id="question"></h3>
+            <ul id="choices">
+                <li><button class="choice-btn"></button></li>
+                <li><button class="choice-btn"></button></li>
+                <li><button class="choice-btn"></button></li>
+                <li><button class="choice-btn"></button></li>
+            </ul>
+            <p id="answer-result" style="display:none;"></p>
+        </section>
 
-<!-- view high scores -->
-<section id="high-scores" hidden>
-    <h2>High Scores</h2>
-    <ol id="high-scores-list">
-        <li class="user-score"></li>
-        <li class="user-score"></li>
-        <li class="user-score"></li>
-        <li class="user-score"></li>
-        <li class="user-score"></li>
-    </ol>
-    <button id="go-back">Try again</button>
-    <button id="clear-scores">Clear scores</button>
-</section>
-    
+        <section id="game-over" style="display:none;">
+            <h2>Game Over!</h2>
+            <p>Your score: <span id="final-score"></span></p>
+            <button id="restart-quiz">Restart Quiz</button>
+            
+        </section>
 
-    <script src="./assets/js/quiz.js"></script>
-    <script src="./assets/js/script.js"></script>
+        <section id="save-score" style="display:none;">
+            <h2>Save Your Score</h2>
+            <form id="score-form">
+                <label for="name">Name: </label>
+                <input type="text" id="name" required>
+                <button type="submit">Save Score</button>
+            </form>
+        </section>
+        
 
+        <section id="high-scores" style="display:none;">
+            <h2>High Scores</h2>
+            <ol id="score-list">
+                <li id="no-scores">No scores recorded yet!</li>
+            </ol>
+            <button id="clear-scores">Clear Scores</button>
+            <button id="back-to-home">Back to Home</button>
+        </section>
+    </main>
 
+    <script src="script.js"></script>
 </body>
 </html>

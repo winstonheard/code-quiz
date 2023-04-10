@@ -11,12 +11,13 @@
 <body>
     <header>
         <h1>Javascript Code Quiz</h1>
-        
+        <p>From Arrays to zIndex, let's see what you know!</p>
     </header>
 
     <main>
         <section id="welcome">
-            <p>From Arrays to zIndex, let's see what you know!</p>
+            <p>You have one minute (60 seconds) to answer five questions about Javascript terminology and functionality. But be aware that if you answer a question incorreclty, you will lose ten seconds from your time!</p>
+            <p>Good luck!</p>
             <button id="start-quiz">Start Quiz</button>
             <button id="view-high-scores">View High Scores</button>
         </section>
@@ -34,32 +35,40 @@
         </section>
 
         <section id="game-over" style="display:none;">
-            <h2>Game Over!</h2>
-            <p>Your score: <span id="final-score"></span></p>
-            <button id="restart-quiz">Restart Quiz</button>
+            <h2>Quiz Over!</h2>
+            <!-- <p>Name: <span id="user-name"></span></p> -->
+            <p>Your final score is: <span id="final-score"></span></p>
+            <p id="custom-message"></p>
+            <form id="score-form">
+                <label for="name">Name: </label>
+                <input type="text" id="name" required>
+                <button type="submit">Save Score</button>
+            </form>
             
         </section>
 
-        <section id="save-score" style="display:none;">
+        <!-- <section id="save-score" style="display:none;">
             <h2>Save Your Score</h2>
             <form id="score-form">
                 <label for="name">Name: </label>
                 <input type="text" id="name" required>
                 <button type="submit">Save Score</button>
             </form>
-        </section>
+        </section> -->
         
 
         <section id="high-scores" style="display:none;">
-            <h2>High Scores</h2>
-            <ol id="score-list">
-                <li id="no-scores">No scores recorded yet!</li>
-            </ol>
-            <button id="clear-scores">Clear Scores</button>
-            <button id="back-to-home">Back to Home</button>
+               <h2>High Scores</h2>
+                <div class="high-scores-container">
+            
+            <ol id="score-list"></ol>
+            </div>
+            <button id="restart-quiz">Restart Quiz</button>
+            <button id="clear-scores">Clear High Scores</button>
         </section>
+          
     </main>
 
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
